@@ -1,8 +1,9 @@
-import 'react-native-reanimated'
+import 'react-native-gesture-handler';
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
-import {createNativeStackNavigator} from '@react-navigation/stack'
+import {createStackNavigator} from '@react-navigation/stack'
 import {ContextProvider, Context} from './Global/Context'  
 
 function HomeScreen({navigation}) {
@@ -29,7 +30,7 @@ function OtraPantalla({navigation}) {
   )
 }
 
-const Stack = createNativeStackNavigator()
+const Stack = createStackNavigator()
 
 export default function App() {
   return (
