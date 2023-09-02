@@ -13,8 +13,7 @@ export const ContextProvider = ({ children }) => {
         setVal,
         val1,
         setVal1,
-      }}
-    >
+      }}>
       {children}
     </Context.Provider>
   );

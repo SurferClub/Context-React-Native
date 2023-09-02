@@ -11,7 +11,7 @@ function HomeScreen({navigation}) {
     <View style={{flex:1,alignItems: 'center',justifyContent: 'center'}}>
       <Text>HomeScreen</Text>
       <Button title="otra pantalla"
-      onPress={()=> navigation.navigate('otra Pantalla')}
+      onPress={()=> navigation.navigate('OtraPantalla')}
       >
       </Button>
     </View>
@@ -37,9 +37,10 @@ export default function App() {
     <ContextProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen
-          }/>
-          <Stack.Screen name="Otra pantalla" component={OtraPantalla}/>
+          <Stack.Screen name="Home" component={HomeScreen}
+          options={{ headerShown: false }}
+          />
+          <Stack.Screen name="OtraPantalla" component={OtraPantalla}/>
         </Stack.Navigator>
         </NavigationContainer>   
     </ContextProvider>
