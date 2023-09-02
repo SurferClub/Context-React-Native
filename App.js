@@ -5,15 +5,23 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import {ContextProvider, Context} from './Global/Context'  
+import { useContext } from 'react';
 
 function HomeScreen({navigation}) {
+  const {val,setVal,val1,setVal1} = useContext(Context)
+
   return (
     <View style={{flex:1,alignItems: 'center',justifyContent: 'center'}}>
       <Text>HomeScreen</Text>
+      <Text>{val}</Text>
+      <Text>{val1}</Text>
       <Button title="otra pantalla"
       onPress={()=> navigation.navigate('OtraPantalla')}
-      >
-      </Button>
+      />
+      <Button title='Incremento' onPress={()=>{
+        setVal(val + 1)
+        setVal1(val1 + 1)
+      }}/>
     </View>
   )
 }
