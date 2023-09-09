@@ -12,24 +12,30 @@ function HomeScreen({navigation}) {
 
   return (
     <View style={styles.container}>
-      
-      <Text style={styles.containerText}>
-        HomeScreen</Text>
-      
-      <Text>{val}</Text>
-      <Text>{val1}</Text>
-      <View style={{flexDirection: 'row'}}>
-      <Button title="otra pantalla"
-      onPress={()=> navigation.navigate('OtraPantalla')}
-      />
-      <Button 
-         color="#f194ff" 
-        title='Incremento' 
-        onPress={()=>{
-          setVal(val + 1)
-          setVal1(val1 + 1)
-        }}/>
+      <View style={{flex:2,alignItems: 'center', 
+            justifyContent: 'center', }} >
+        <Text style={styles.containerText}>
+          HomeScreen
+        </Text>
       </View>
+      <View style={{flex:2,alignItems: 'center', 
+            justifyContent: 'center', }}>
+        <Text style={styles.containerText}>{val}</Text>
+        <Text style={styles.containerText}>{val}>{val1}</Text>
+      </View>
+      <View style={{flex:2,alignItems: 'center', 
+    justifyContent: 'center', }}>
+          <Button title="otra pantalla"
+            onPress={()=> navigation.navigate('OtraPantalla')}
+            />
+          <Button 
+            color="#f194ff" 
+            title='Incremento' 
+            onPress={()=>{
+              setVal(val + 1)
+              setVal1(val1 + 1)
+            }}/>
+        </View>
     </View>
   )
 }
@@ -71,13 +77,18 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
+     flexDirection: 'column',
+   /*  justifyContent: 'space-between', */
+  },
+  container2: {
+    
+    alignItems: 'center', 
+    justifyContent: 'center', 
   },
   containerText:{
     fontSize: 22,
     margin:20,
-    paddingTop:170,
+    /* paddingTop:170, */
   }
   ,
   button:{
